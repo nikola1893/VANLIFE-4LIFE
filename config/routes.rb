@@ -4,8 +4,8 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  resources :vans, except: [:new, :edit] do
-    :bookings, only: [:new, :create, :update]
+  resources :vans, except: [ :new, :edit ] do
+    resources :bookings, only: [ :new, :create, :update ]
   end
 
   get 'dashboard', to: 'pages#dashboard'
