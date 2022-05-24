@@ -5,3 +5,30 @@
 @import "navbar";
 @import "button";
 @import "banner";
+
+body p {
+  font-size: 18px;
+  font-weight: 'regular';
+  font-family: 'Radio Canada',
+  sans-serif;
+  font-family: 'Roboto',
+  sans-serif;
+}
+
+body h1 {
+  font-size: 48px;
+  font-weight: 'black';
+  font-family: 'Radio Canada',
+    sans-serif;
+  font-family: 'Roboto',
+    sans-serif;
+}
+
+body h2 {
+  font-size: 24px;
+  font-weight: 'black';
+  font-family: 'Radio Canada',
+    sans-serif;
+  font-family: 'Roboto',
+    sans-serif;
+}
