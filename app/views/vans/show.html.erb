@@ -1,1 +1,26 @@
-<h2><%= @van.title %></h2>
+<div class="container" style="margin: 80px 50px;">
+  <div style="display: flex; justify-content: space-between; align-items: flex-end;">
+    <div style="margin: 30px;"><h2><%= @van.title %></h2></div>
+    <div style="margin: 30px;"><%= link_to "Book now", "#", class: "btn btn-flat" %></div>
+  </div>
+
+  <div class="picture"
+      style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url(https://images.unsplash.com/photo-1627666259988-61466d077860?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740);">
+  </div>
+
+  <div style="margin: 30px;"><p><%= @van.description %></p></div>
+
+  <div style="display: flex; justify-content: space-between; align-items: flex-end;">
+    <div style="margin: 0px 30px; color: grey; font-size: 12px;"><p>Posted by:</p></div>
+    <div style="margin: 0px 30px; color: grey; font-size: 12px;"><p>Price per day</p></div>
+  </div>
+
+  <div style="display: flex; justify-content: space-between; align-items: flex-end;">
+    <div style="margin: 0px 30px;"><h3><%= @van.user.first_name %></h3></div>
+    <div style="margin: 0px 30px;"><h3>€<%= @van.price_per_day %></h3></div>
+  </div>
+
+</div>
+<div>
+<%= render "shared/footer" %>
+</div>
