@@ -1,4 +1,21 @@
 <h1>Pick your next beautiful van</h1>
-<% @vans.each do |van| %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-4">
+      <% @vans.each do |van| %>
   <%= render "shared/card", van: van %>
 <% end %>
+    </div>
+    <div class="col-4">
+      <% @vans.each do |van| %>
+  <%= render "shared/card", van: van %>
+<% end %>
+    </div>
+    <div class="col-4">
+      <% @vans.each do |van| %>
+  <%= render "shared/card", van: van %>
+<% end %>
+    </div>
+  </div>
+</div>
