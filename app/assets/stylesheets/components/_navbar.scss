@@ -1,6 +1,12 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
+  position: fixed;
+  top: 0;
+    /* Position the navbar at the top of the page */
+  width: 100%;
+    /* Full width */
+  z-index: 1;
 }
 
 .navbar-lewagon .navbar-collapse {
