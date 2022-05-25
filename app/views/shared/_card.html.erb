@@ -1,12 +1,11 @@
 <div class="card-van">
-  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+  <%= image_tag(van.image_link) %>
   <div class="card-van-infos">
     <div>
       <h2><%= van.title %></h2>
       <p><%= van.description %></p>
     </div>
     <h2 class="card-van-pricing"><%= van.price_per_day %></h2>
-    <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-van-user avatar-bordered" />
-     <%# <%= link_to 'See the van', van_path(params) %>
+    <img src="https://kitt.lewagon.com/placeholder/users/random" class="card-van-user avatar-bordered" />
   </div>
 </div>
