@@ -9,20 +9,21 @@ class VansController < ApplicationController
 
   def new
     @van = Van.new
+  end
+
+  def create
+    @van = Van.new(van_params)
+    @van.user = current_user
     if @van.save
-      redirect_to @van, notice: 'Van was successfully created.'
+      redirect_to vans_path, notice: 'Van was successfully created.'
     else
       render :new
     end
   end
 
-  def create
-    @van = Van.new()
-  end
-
   private
 
   def van_params
-    params.require(:van).permit(:title, :descriptiom, :price_per_day)
+    params.require(:van).permit(:title, :description, :price_per_day, :image_link)
   end
 end
