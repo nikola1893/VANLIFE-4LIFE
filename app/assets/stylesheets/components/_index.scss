@@ -7,6 +7,8 @@
 @import "banner";
 @import "card";
 @import "footer";
+@import "picture";
+
 
 body p {
   font-size: 18px;
@@ -28,6 +30,15 @@ body h1 {
 
 body h2 {
   font-size: 24px;
+  font-weight: 'black';
+  font-family: 'Radio Canada',
+    sans-serif;
+  font-family: 'Roboto',
+    sans-serif;
+}
+
+body h3 {
+  font-size: 20px;
   font-weight: 'black';
   font-family: 'Radio Canada',
     sans-serif;
