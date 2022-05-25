@@ -1,5 +1,7 @@
 <div class="card-van">
-  <%= image_tag(van.image_link) %>
+  <% if van.image_link.present? %>
+    <%= image_tag(van.image_link) %>
+  <% end %>
   <div class="card-van-infos">
     <div>
       <h2><%= van.title %></h2>
