@@ -1,9 +1,8 @@
 // Import Google fonts
-@import url('https://fonts.googleapis.com/css2?family=Radio+Canada:wght@700&family=Roboto:wght@400;500;900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans:wght@300;400;500;700&family=Raleway:wght@100;200;300;400;500&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300&display=swap');
 // Define fonts for body and headers
 $body-font: "Work Sans", "Helvetica", "sans-serif";
-$headers-font: "Roboto", "Helvetica", "sans-serif";
+$headers-font: 'Montserrat', sans-serif;
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {
@@ -16,11 +15,9 @@ $headers-font: "Roboto", "Helvetica", "sans-serif";
 // $my-font: "Font Name";
 
 h1 {
-  color: rgb(70, 70, 70);
-  font-family: 'Roboto', sans-serif;
-  font-size: 50px;
+  color: rgb(30, 30, 30);
+  font-family: 'Montserrat', sans-serif;
 }
-
 
 body p {
   font-size: 18px;
@@ -35,8 +32,7 @@ body p {
 body h2 {
   font-size: 24px;
   font-weight: 'black';
-  font-family: 'Roboto',
-    sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 body h3 {
