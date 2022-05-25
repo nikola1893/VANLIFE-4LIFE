@@ -1,2 +1,14 @@
 // Import page-specific CSS files here.
 @import "home";
+
+h1 {
+  text-align: center;
+  color: rgb(59, 59, 59);
+  font-family: 'Roboto', sans-serif;
+  font-size: 500;
+}
+
+.card-van {
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
