@@ -5,7 +5,7 @@
   <div class="card-van-infos">
     <div>
       <h2><%= van.title %></h2>
-      <p><%= van.description %></p>
+      <p><%= van.description[0..100] %>...</p>
     </div>
     <h2 class="card-van-pricing"><%= van.price_per_day %></h2>
     <img src="https://kitt.lewagon.com/placeholder/users/random" class="card-van-user avatar-bordered" />
