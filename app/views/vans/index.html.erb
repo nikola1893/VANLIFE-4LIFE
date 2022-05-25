@@ -4,20 +4,17 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-4">
-      <% @vans.each do |van| %>
-  <%= render "shared/card", van: van %>
-<% end %>
-    </div>
-    <div class="col-4">
-      <% @vans.each do |van| %>
-  <%= render "shared/card", van: van %>
-<% end %>
-    </div>
-    <div class="col-4">
-      <% @vans.each do |van| %>
-  <%= render "shared/card", van: van %>
-<% end %>
-    </div>
+    <% @vans.each do |van| %>
+      <div class="col-3">
+        <div>
+          <%= link_to van_path(van) do %>
+          <%= render "shared/card", van: van %>
+          <% end %>
+        </div>
+      </div>
+     <% end %>
   </div>
+</div>
+<div>
+<%= render "shared/footer" %>
 </div>
