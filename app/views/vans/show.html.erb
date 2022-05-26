@@ -1,7 +1,50 @@
-<div class="container" style="margin-top: 90px; margin-bottom: 20px; width: 50%; vertical-align: middle;">
-  <div style="display: flex; justify-content: space-between; align-items: flex-end;">
-    <div style="margin: 30px;"><h2><%= @van.title %></h2></div>
-    <div style="margin: 30px;"><%= link_to "Book now", "#", class: "btn btn-flat" %></div>
+<div class="container" style="margin-top: 90px; margin-bottom: 20px; width: 80%; vertical-align: middle;">
+
+  <div class="row">
+
+    <div class="col-8">
+
+      <div class="mt-4 mb-4"><h1><%= @van.title %></h1></div>
+
+
+      <div class="picture"
+          style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url(<%= @van.image_link %>);">
+      </div>
+
+      <div class="mt-4 mb-4"><p><%= @van.description %></p></div>
+
+      <div  style="width: 100%; height: 400px; margin-bottom: 200px; border-radius: 10px;"
+        data-controller="mapbox"
+        data-mapbox-markers-value="<%= @markers.to_json %>"
+        data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
+
+    </div>
+
+    <div class="col-4 mt-5">
+      <div class="bg-white p-4 m-5 position-fixed">
+        <div class="mt-3 mb-3"><h2>Book this <%= @van.title %></h2></div>
+        <div class="mb-4">
+          <%= simple_form_for([@van, @booking]) do |f| %>
+            <%= f.input :start_date, label: 'Start date' %>
+            <%= f.input :end_date, label: 'End date' %>
+            <%= f.submit class: "btn btn-flat w-100 mt-3" %>
+          <% end %>
+        </div>
+          <div>
+          <div style="display: flex; justify-content: space-between; align-items: flex-end;">
+            <div style="color: grey; font-size: 12px;"><p>Posted by:</p></div>
+            <div style="color: grey; font-size: 12px;"><p>Price per day</p></div>
+          </div>
+
+          <div style="display: flex; justify-content: space-between; align-items: flex-end;">
+            <div><h3><%= @van.user.first_name %></h3></div>
+            <div><h3>€<%= @van.price_per_day %></h3></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 
   <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">

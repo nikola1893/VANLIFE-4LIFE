@@ -8,6 +8,7 @@ class VansController < ApplicationController
 
   def show
     @van = Van.find(params[:id])
+    @booking = Booking.new
 
     @markers =[@van].map do |van|
       {
@@ -25,7 +26,7 @@ class VansController < ApplicationController
     @van = Van.new(van_params)
     @van.user = current_user
     if @van.save
-      redirect_to vans_path, notice: 'Van was successfully created.'
+      redirect_to vans_path
     else
       render :new
     end
