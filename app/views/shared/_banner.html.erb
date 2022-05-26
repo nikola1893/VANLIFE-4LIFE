@@ -1,5 +1,20 @@
-  <div class="banner" style="background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.3)), url(<%= image_path("vanlife.jpg")%>);">
-    <h1>VanLife 4 Life !</h1>
-    <p>Explore the world and yourself !</p>
-    <%= link_to "See all vans", vans_path, class: "btn btn-flat" %>
+<div class="banner" style="background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.3)), url(<%= image_path("vanlife.jpg")%>);">
+  <h1>VanLife 4 Life</h1>
+  <p>Explore the World and Yourself</p>
+
+
+  <div class="wrap">
+    <div class="search">
+      <%= form_tag vans_path, class: "d-flex", method: :get do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "searchTerm",
+          placeholder: "Choose the location"
+        %>
+        <%= button_tag type: 'submit', class: "searchButton" do %>
+          <i class="fa fa-search"></i>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
 </div>
