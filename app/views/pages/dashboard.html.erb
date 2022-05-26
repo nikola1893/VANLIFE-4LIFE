@@ -9,7 +9,7 @@
     </div>
     <div class="row">
       <% @my_vans.each do |van| %>
-        <div class="col-3">
+        <div class="col-6">
           <div>
             <%= link_to van_path(van) do %>
             <%= render "shared/card", van: van %>
@@ -28,7 +28,7 @@
     </div>
     <div class="row">
       <% @my_bookings.each do |van| %>
-        <div class="col-3">
+        <div class="col-6">
           <div>
             <%= link_to van_path(van) do %>
               <%= render "shared/card", van: van %>
