@@ -1,12 +1,15 @@
 class VansController < ApplicationController
   def index
     @vans = Van.all
+    if params[:query].present?
+      @vans = Van.near(params[:query], 10)
+    end
   end
 
   def show
     @van = Van.find(params[:id])
 
-    @markers = Van.all.geocoded.map do |van|
+    @markers =[@van].map do |van|
       {
         lat: van.latitude,
         lng: van.longitude
@@ -31,6 +34,6 @@ class VansController < ApplicationController
   private
 
   def van_params
-    params.require(:van).permit(:title, :description, :price_per_day, :image_link)
+    params.require(:van).permit(:title, :description, :price_per_day, :address, photos: [])
   end
 end

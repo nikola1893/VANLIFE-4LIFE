@@ -4,9 +4,30 @@
     <div style="margin: 30px;"><%= link_to "Book now", "#", class: "btn btn-flat" %></div>
   </div>
 
-  <div class="picture"
-      style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url(<%= @van.image_link %>);">
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+
+    <div class="carousel-item active">
+    <%= cl_image_tag @van.photos.first.key, height: 500, class:"d-block w-100 van_img" %>
+    </div>
+    <% @van.photos.each do |photo| %>
+      <% if @van.photos.first.key == photo.key %>
+      <% else %>
+          <div class="carousel-item">
+            <%= cl_image_tag photo.key, height: 500, class:"d-block w-100 van_img" %>
+          </div>
+      <% end %>
+    <% end %>
   </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
 
   <div style="margin: 30px;"><p><%= @van.description %></p></div>
 
