@@ -1,6 +1,9 @@
 class VansController < ApplicationController
   def index
     @vans = Van.all
+    if params[:query].present?
+      @vans = Van.near(params[:query], 10)
+    end
   end
 
   def show
