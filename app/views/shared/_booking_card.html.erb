@@ -1,0 +1,5 @@
+<%= simple_form_for @booking do |f| %>
+  <%= f.date :start_date, label: 'DD/MM/YY' %>
+  <%= f.date :end_date, label: 'DD/MM/YY' %>
+  <%= f.button :submit %>
+<% end %>
