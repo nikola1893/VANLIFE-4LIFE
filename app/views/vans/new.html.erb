@@ -8,7 +8,9 @@
       <%= f.input :title %>
       <%= f.input :description %>
       <%= f.input :price_per_day %>
-      <%= f.input :image_link %>
+      <%= f.input :address %>
+       <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+
     </div>
 
     <div class="form-actions">
