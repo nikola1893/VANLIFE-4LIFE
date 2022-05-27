@@ -1,6 +1,11 @@
 class VansController < ApplicationController
   def index
-    @vans = Van.all
+    if params[:ca].present?
+      @vans = Van.where(category: params[:ca])
+    else
+      @vans = Van.all
+    end
+
     if params[:query].present?
       @vans = Van.near(params[:query], 10)
     end
@@ -35,6 +40,6 @@ class VansController < ApplicationController
   private
 
   def van_params
-    params.require(:van).permit(:title, :description, :price_per_day, :address, photos: [])
+    params.require(:van).permit(:title, :description, :price_per_day, :address, :category, photos: [])
   end
 end
