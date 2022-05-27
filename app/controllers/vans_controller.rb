@@ -1,6 +1,11 @@
 class VansController < ApplicationController
   def index
-    @vans = Van.all
+    if params[:ca].present?
+      @vans = Van.where(category: params[:ca])
+    else
+      @vans = Van.all
+    end
+
     if params[:query].present?
       @vans = Van.near(params[:query], 10)
     end

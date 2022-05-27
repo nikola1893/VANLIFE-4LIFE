@@ -1,0 +1,28 @@
+.topbar {
+  background: #F4F4F4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  width: 100%;
+  margin-top: 100px;
+  // position: relative;
+  color: rgb(107, 107, 107);
+  font-family: "Montserrat", sans-serif;
+}
+
+.incentive {
+  color: rgb(107, 107, 107);
+}
+
+.a {
+  color: rgb(107, 107, 107);
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
+}
+
+.a:hover {
+  color: rgb(0, 0, 0);
+  opacity: 1;
+}
