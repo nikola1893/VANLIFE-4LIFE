@@ -6,7 +6,7 @@ class BookingsController < ApplicationController
     @van = Van.find(params[:van_id])
     @booking.van = @van
     if @booking.save
-      redirect_to vans_path
+      redirect_to dashboard_path
     else
       render "vans/show"
     end
