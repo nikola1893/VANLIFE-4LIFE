@@ -2,13 +2,13 @@
 
   <%= cl_image_tag van.photos[0].key %>
 
-  <div class="card-van-infos">
+  <div class="card-van-infos" style="" >
     <div>
       <h2><%= van.title %></h2>
       <p><%= van.description[0..100] %>...</p>
     </div>
-    <h2 class="card-van-pricing"><%= van.price_per_day %></h2>
-    <img src="https://kitt.lewagon.com/placeholder/users/random" class="card-van-user avatar-bordered" />
+    <h2 class="card-van-pricing" style="align-self: flex-end;">€<%= van.price_per_day.to_i %></h2>
+    <img src="https://kitt.lewagon.com/placeholder/users/random" style="" class="card-van-user avatar-bordered" />
     <% if van.user.avatar.key %>
             <%= cl_image_tag(van.user.avatar.key, class: "card-van-user avatar-bordered") %>
           <% else %>
