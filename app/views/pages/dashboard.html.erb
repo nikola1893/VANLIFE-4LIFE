@@ -5,7 +5,7 @@
     <div class="col-6">
       <div class="container min-vh-100">
     <div style="margin: 130px 0px 40px 0px">
-      <h1>My vans</h1>
+      <h2 class="bg-white p-4" >My Vans</h2>
     </div>
     <div class="row">
       <% @my_vans.each do |van| %>
@@ -24,14 +24,15 @@
     <div class="col-6">
       <div class="container min-vh-100">
     <div style="margin: 130px 0px 40px 0px">
-      <h1>My Bookings</h1>
+      <h2 class="bg-white p-4" >My Bookings</h2>
     </div>
     <div class="row">
-      <% @my_bookings.each do |van| %>
+      <% @my_bookings.each do |booking| %>
         <div class="col-6">
           <div>
-            <%= link_to van_path(van) do %>
-              <%= render "shared/card", van: van %>
+            <%= link_to van_path(booking.van) do %>
+              <%= booking.end_date %>
+              <%= render "shared/card", van: booking.van %>
                <% end %>
               </div>
             </div>
