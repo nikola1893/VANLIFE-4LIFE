@@ -9,5 +9,10 @@
     </div>
     <h2 class="card-van-pricing"><%= van.price_per_day %></h2>
     <img src="https://kitt.lewagon.com/placeholder/users/random" class="card-van-user avatar-bordered" />
+    <% if van.user.avatar.key %>
+            <%= cl_image_tag(van.user.avatar.key, class: "card-van-user avatar-bordered") %>
+          <% else %>
+            <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "card-van-user avatar-bordered" %>
+          <% end %>
   </div>
 </div>
