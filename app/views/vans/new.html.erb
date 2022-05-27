@@ -10,6 +10,7 @@
       <%= f.input :price_per_day %>
       <%= f.input :address %>
       <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+      <%= f.input :category, as: :select, collection: ["Retro", "High-tech", "Budget"]%>
     </div>
 
     <div class="form-actions">
