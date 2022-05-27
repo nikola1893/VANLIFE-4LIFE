@@ -13,6 +13,12 @@
 @import "pages/index";
 @import "mapbox-gl/dist/mapbox-gl";
 
+// Css font style
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Niconne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Roboto:wght@300&display=swap');
+
 body {
-   min-height: 100vh;
+  min-height: 100vh;
 }
